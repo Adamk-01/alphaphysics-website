@@ -23,8 +23,8 @@ export const groupHref = site.groupLink || wa(MSG.aspirants);
 
 export const nav = [
   { href: "/", label: "Home" }, { href: "/about", label: "About" }, { href: "/services", label: "Services" },
-  { href: "/2027-aspirants", label: "2027 Aspirants" }, { href: "/resources", label: "Resources" },
-  { href: "/faq", label: "FAQ" }, { href: "/contact", label: "Contact" },
+  { href: "/cut-off-checker", label: "Cut-Off Checker" }, { href: "/2027-aspirants", label: "2027 Aspirants" }, 
+  { href: "/resources", label: "Resources" }, { href: "/faq", label: "FAQ" }, { href: "/contact", label: "Contact" },
 ];
 
 export type Service = { slug: string; title: string; icon: string; short: string; what: string; who: string; help: string[]; msg: string };

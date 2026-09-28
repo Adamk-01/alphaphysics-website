@@ -1,0 +1,77 @@
+export const schools = [
+  {
+    id: "unilag",
+    name: "University of Lagos (UNILAG)",
+    type: "Federal University",
+    generalCutOff: 200,
+    courses: [
+      { name: "Medicine and Surgery", cutoff: 280, reqs: "English, Biology, Chemistry, Physics" },
+      { name: "Law", cutoff: 260, reqs: "English, Literature in English, and any two Arts/Social Science subjects" },
+      { name: "Computer Science", cutoff: 240, reqs: "English, Math, Physics, Chemistry" },
+      { name: "Accounting", cutoff: 230, reqs: "English, Math, Economics, and any other subject" },
+      { name: "Mass Communication", cutoff: 220, reqs: "English, Literature in English, and any two Arts/Social Science subjects" },
+      { name: "Mechanical Engineering", cutoff: 250, reqs: "English, Math, Physics, Chemistry" },
+    ],
+  },
+  {
+    id: "ui",
+    name: "University of Ibadan (UI)",
+    type: "Federal University",
+    generalCutOff: 200,
+    courses: [
+      { name: "Medicine and Surgery", cutoff: 290, reqs: "English, Biology, Chemistry, Physics" },
+      { name: "Law", cutoff: 270, reqs: "English, Literature in English, and any two Arts/Social Science subjects" },
+      { name: "Computer Science", cutoff: 240, reqs: "English, Math, Physics, Chemistry" },
+      { name: "Pharmacy", cutoff: 275, reqs: "English, Biology, Chemistry, Physics" },
+    ],
+  },
+  {
+    id: "oau",
+    name: "Obafemi Awolowo University (OAU)",
+    type: "Federal University",
+    generalCutOff: 200,
+    courses: [
+      { name: "Medicine and Surgery", cutoff: 275, reqs: "English, Biology, Chemistry, Physics" },
+      { name: "Law", cutoff: 255, reqs: "English, Literature in English, and any two Arts/Social Science subjects" },
+      { name: "Computer Science", cutoff: 235, reqs: "English, Math, Physics, Chemistry" },
+      { name: "Accounting", cutoff: 225, reqs: "English, Math, Economics, and any other subject" },
+    ],
+  },
+  {
+    id: "unilorin",
+    name: "University of Ilorin (UNILORIN)",
+    type: "Federal University",
+    generalCutOff: 180,
+    courses: [
+      { name: "Medicine and Surgery", cutoff: 260, reqs: "English, Biology, Chemistry, Physics" },
+      { name: "Law", cutoff: 240, reqs: "English, Literature in English, and any two Arts/Social Science subjects" },
+      { name: "Computer Science", cutoff: 220, reqs: "English, Math, Physics, Chemistry" },
+      { name: "Nursing Science", cutoff: 240, reqs: "English, Biology, Chemistry, Physics" },
+      { name: "Business Administration", cutoff: 200, reqs: "English, Math, Economics, and one other subject" },
+    ],
+  },
+  {
+    id: "lasu",
+    name: "Lagos State University (LASU)",
+    type: "State University",
+    generalCutOff: 195,
+    courses: [
+      { name: "Medicine and Surgery", cutoff: 250, reqs: "English, Biology, Chemistry, Physics" },
+      { name: "Law", cutoff: 240, reqs: "English, Literature in English, and any two Arts/Social Science subjects" },
+      { name: "Computer Science", cutoff: 200, reqs: "English, Math, Physics, Chemistry" },
+      { name: "Business Administration", cutoff: 195, reqs: "English, Math, Economics, and one other subject" },
+    ],
+  },
+  {
+    id: "yabatech",
+    name: "Yaba College of Technology (YABATECH)",
+    type: "Polytechnic",
+    generalCutOff: 150,
+    courses: [
+      { name: "Computer Science (ND)", cutoff: 160, reqs: "English, Math, Physics, Chemistry" },
+      { name: "Accountancy (ND)", cutoff: 160, reqs: "English, Math, Economics, and one other subject" },
+      { name: "Business Administration (ND)", cutoff: 150, reqs: "English, Math, Economics, and one other subject" },
+      { name: "Science Laboratory Technology (ND)", cutoff: 160, reqs: "English, Biology, Chemistry, Physics/Math" },
+    ],
+  },
+];
