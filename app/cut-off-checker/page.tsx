@@ -25,7 +25,7 @@ export default function CutoffCheckerPage() {
               We process admissions for hundreds of schools across Nigeria. If your preferred institution isn't listed here, join our community or send us a message to get the exact requirements.
             </p>
             <div className="mt-8 flex justify-center">
-              <JoinBtn label="Join the Aspirants Group" variant="primary" />
+              <JoinBtn label="Join the Aspirants Group" variant="gold" />
             </div>
           </div>
         </Container>
