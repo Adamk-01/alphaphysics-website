@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: { default: `${site.name} | Admission & JAMB/UTME Guidance in Nigeria`, template: `%s | ${site.name}` },
   description: site.description,
+  verification: {
+    google: "fuFTZ6a5geBIAuj2Br-sBd1Y-4bCxCnpCDi20JQi89k",
+  },
   other: {
     "google-adsense-account": "ca-pub-4289311175968434",
   },
@@ -20,6 +23,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en-NG">
       <head>
+        <meta name="google-site-verification" content="fuFTZ6a5geBIAuj2Br-sBd1Y-4bCxCnpCDi20JQi89k" />
         <meta name="google-adsense-account" content="ca-pub-4289311175968434" />
         <Script
           async
