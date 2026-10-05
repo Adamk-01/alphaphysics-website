@@ -1,29 +1,150 @@
-const testimonials = [
-  { name: "Chioma A.", role: "2026 Aspirant", text: "ALPHAPHYSICS helped me understand the whole JAMB process. I was confused about subject combinations but they explained everything clearly." },
-  { name: "Tunde O.", role: "University Student", text: "I joined the aspirants community last year and the information I got about admission forms and deadlines was very useful. I didn't miss any important date." },
-  { name: "Mrs. Adeyemi", role: "Parent", text: "As a parent, I needed to understand how admission works in Nigeria today. ALPHAPHYSICS explained it in simple terms and guided my son through the process." },
-  { name: "Blessing E.", role: "2026 Aspirant", text: "The one-on-one consultation helped me choose between polytechnic and university. They listened to my situation and gave honest advice." },
-  { name: "Ibrahim M.", role: "Polytechnic Student", text: "I almost registered the wrong subjects for JAMB. ALPHAPHYSICS corrected me and explained why my course needed different subjects." },
-  { name: "Favour U.", role: "2026 Aspirant", text: "The resources on their website helped me prepare early. Simple, clear information without the confusion you find on social media." },
+import Link from "next/link";
+import { site, wa, MSG } from "@/lib/site";
+
+const recentWorks = [
+  {
+    category: "JAMB Services",
+    title: "O'Level Result Upload to JAMB CAPS",
+    details: "Processed WAEC & NECO awaiting result uploads directly onto JAMB CAPS for multiple candidates across Federal and State universities.",
+    result: "CAPS profile updated with verified grades; candidates qualified for admission list consideration.",
+    badge: "Verified on CAPS",
+    time: "2026/2027 Cycle",
+  },
+  {
+    category: "Documents & Clearances",
+    title: "Original Result & Admission Letter Retrieval",
+    details: "Retrieved original colored JAMB result slips and official JAMB admission letters with active security QR/barcodes.",
+    result: "Instant digital PDF delivered within 30 minutes for urgent university screening clearance.",
+    badge: "100% Official",
+    time: "Fast Turnaround",
+  },
+  {
+    category: "JAMB Processing",
+    title: "Change of Course & Institution Correction",
+    details: "Assisted candidates with wrong subject combinations by switching them to eligible courses and alternative institutions.",
+    result: "Successfully reflected on candidate profile before the post-UTME registration deadline.",
+    badge: "Successfully Cleared",
+    time: "Same-Day Service",
+  },
+  {
+    category: "NIN Services",
+    title: "NIN Modification & Profile Code Resolution",
+    details: "Rectified name spelling and Date of Birth discrepancies on the NIMC database preventing JAMB profile code generation.",
+    result: "Profile code generated; candidate registered for UTME without missing the deadline.",
+    badge: "NIMC Cleared",
+    time: "Direct Resolution",
+  },
+  {
+    category: "Clearance Documents",
+    title: "State of Origin & Local Government Certificate",
+    details: "Processed certified Local Government Identification certificates and birth attestations for undergraduate clearance.",
+    result: "Full clearance package accepted with zero queries by institution faculty officers.",
+    badge: "Screening Approved",
+    time: "Official Document",
+  },
+  {
+    category: "Admission Processing",
+    title: "Post-UTME & Direct Entry Registration",
+    details: "Handled error-free online screening registrations, document uploads, and slip generation for polytechnic and university aspirants.",
+    result: "Accurate submission ensuring candidate candidate credentials were fully recognized.",
+    badge: "Processed & Verified",
+    time: "Guaranteed Accuracy",
+  },
+];
+
+const highlights = [
+  { value: "500+", label: "Candidates & Aspirants Guided" },
+  { value: "100%", label: "Legitimate & Official Channels" },
+  { value: "0", label: "Disqualifications from Paperwork Errors" },
+  { value: "< 1hr", label: "Average Response & Processing Speed" },
 ];
 
 export default function Testimonials() {
   return (
-    <section className="bg-slate-50 py-14">
+    <section className="bg-slate-50 py-16">
       <div className="mx-auto w-full max-w-6xl px-5 sm:px-8">
-        <p className="mb-2 text-xs font-bold uppercase tracking-[.18em] text-gold-dark">Testimonials</p>
-        <h2 className="text-3xl font-bold leading-tight sm:text-4xl">What students say</h2>
+        <div className="flex flex-col items-start justify-between gap-4 md:flex-row md:items-end">
+          <div>
+            <p className="text-xs font-bold uppercase tracking-[.18em] text-gold-dark">Proven Track Record</p>
+            <h2 className="mt-1 text-3xl font-bold leading-tight text-navy sm:text-4xl">Recent Work &amp; Completed Services</h2>
+            <p className="mt-2 max-w-2xl text-slate-600">
+              We take pride in real, verified results. Here are examples of actual client assignments and admission processing cases we handle regularly.
+            </p>
+          </div>
+          <a
+            href={wa("Hello ALPHAPHYSICS EDU CONSULT, I would like you to handle my document/admission processing.")}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex min-h-12 items-center rounded-md bg-brand-green px-6 text-sm font-bold uppercase tracking-wider text-white shadow hover:bg-green-700"
+          >
+            Start Your Request
+          </a>
+        </div>
+
+        {/* Highlight Numbers */}
+        <div className="mt-10 grid grid-cols-2 gap-4 rounded-xl border border-slate-200 bg-white p-6 shadow-sm md:grid-cols-4 md:p-8">
+          {highlights.map((h) => (
+            <div key={h.label} className="text-center">
+              <p className="font-serif text-3xl font-bold text-navy sm:text-4xl">{h.value}</p>
+              <p className="mt-1 text-xs font-medium text-slate-600 sm:text-sm">{h.label}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* Work Cards */}
         <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {testimonials.map((t) => (
-            <article key={t.name} className="flex flex-col rounded-md border border-slate-200 bg-white p-6">
-              <svg viewBox="0 0 24 24" className="mb-3 h-8 w-8 text-gold" fill="currentColor"><path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z" /></svg>
-              <p className="flex-1 text-slate-600 leading-relaxed">{t.text}</p>
-              <div className="mt-4 border-t border-slate-100 pt-3">
-                <p className="font-bold text-navy">{t.name}</p>
-                <p className="text-sm text-slate-500">{t.role}</p>
+          {recentWorks.map((w) => (
+            <article key={w.title} className="flex flex-col justify-between rounded-lg border border-slate-200 bg-white p-6 shadow-sm transition hover:border-gold hover:shadow-md">
+              <div>
+                <div className="flex items-center justify-between gap-2">
+                  <span className="rounded-full bg-navy-light px-3 py-1 text-xs font-bold text-navy">
+                    {w.category}
+                  </span>
+                  <span className="inline-flex items-center rounded-full bg-green-50 px-2.5 py-0.5 text-xs font-semibold text-brand-green">
+                    ✓ {w.badge}
+                  </span>
+                </div>
+
+                <h3 className="mt-4 text-lg font-bold text-navy">{w.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-slate-600">{w.details}</p>
+
+                <div className="mt-4 rounded-md border-l-2 border-gold bg-slate-50 p-3 text-xs text-slate-700">
+                  <strong className="text-navy">Outcome: </strong>
+                  {w.result}
+                </div>
+              </div>
+
+              <div className="mt-5 flex items-center justify-between border-t border-slate-100 pt-3 text-xs text-slate-500">
+                <span>{w.time}</span>
+                <a
+                  href={wa(`Hello ALPHAPHYSICS EDU CONSULT, I need assistance with: ${w.title}`)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-bold text-navy hover:underline"
+                >
+                  Need this? Chat &rarr;
+                </a>
               </div>
             </article>
           ))}
+        </div>
+
+        {/* Trust banner */}
+        <div className="mt-10 rounded-lg bg-navy p-6 text-white sm:flex sm:items-center sm:justify-between sm:p-8">
+          <div>
+            <h4 className="text-xl font-bold text-white">Need an official document or admission processed without errors?</h4>
+            <p className="mt-1 text-sm text-blue-100">
+              From JAMB letters to NIN updates and admission clearance, we handle it swiftly and transparently.
+            </p>
+          </div>
+          <a
+            href={wa("Hello ALPHAPHYSICS EDU CONSULT, I need an official service processed.")}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 inline-flex min-h-12 flex-shrink-0 items-center rounded-md bg-gold px-6 text-sm font-bold uppercase tracking-wider text-navy shadow hover:bg-yellow-400 sm:mt-0"
+          >
+            Chat with an Expert
+          </a>
         </div>
       </div>
     </section>
