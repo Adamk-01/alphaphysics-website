@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: { default: `${site.name} | Admission & JAMB/UTME Guidance in Nigeria`, template: `%s | ${site.name}` },
   description: site.description,
+  other: {
+    "google-adsense-account": "ca-pub-4289311175968434",
+  },
 };
 export const viewport: Viewport = { themeColor: "#0F2F73", width: "device-width", initialScale: 1 };
 
@@ -17,6 +20,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en-NG">
       <head>
+        <meta name="google-adsense-account" content="ca-pub-4289311175968434" />
         <Script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4289311175968434"
