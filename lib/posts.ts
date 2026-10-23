@@ -73,7 +73,7 @@ Follow the institution you actually applied to, not a general admission blog. Re
       },
       {
         h: "What consultancies can and cannot do",
-        p: `A legitimate consultancy can help you read requirements correctly, prepare and submit applications on time, fix profile and NIN mismatches, upload results to CAPS, print the documents you need, and tell you honestly when a course is out of reach.
+        p: `A legitimate consultancy can help you read requirements correctly, prepare and submit applications on time, fix profile mismatches, upload results to CAPS, print the documents you need, and tell you honestly when a course is out of reach.
 
 What no consultancy can do is decide an admission, influence a merit list, or guarantee an outcome. If a service promises a guaranteed offer, or quotes a price for admission itself rather than for a service, treat it as a warning sign rather than an opportunity.`,
       },
@@ -537,7 +537,7 @@ That is far better information to have now than after a rejection.`,
         h: "Fix your identity documents",
         p: `Compare your name and date of birth across your NIN slip, birth certificate and any O'Level result you hold. Where they differ, start the correction process.
 
-NIMC corrections in particular are not instant. Beginning early is the whole strategy.`,
+NIN records are corrected by NIMC itself, at its offices and enrolment centres — the correction is not something a consultant can do for you, and NIMC corrections are not instant. Beginning early is the whole strategy.`,
       },
       {
         h: "Decide how you will prepare, not just that you will",

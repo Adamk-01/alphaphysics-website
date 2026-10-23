@@ -41,6 +41,13 @@ export default function Terms() {
               of any of them. Any information we pass on about their processes is general guidance, not an official
               statement from them.
             </p>
+            <p className="mt-3">
+              In particular, we are not a licensed National Identification Number (NIN) enrolment agent and we do not
+              carry out NIN enrolment, NIN modification, NIN slip printing or National ID card processing. Those
+              services are provided by NIMC and its licensed agents. We can tell you whether a mismatch between your
+              records is likely to affect your JAMB registration, and point you to NIMC, but the correction itself is
+              yours to complete with them.
+            </p>
           </div>
 
           <div>
