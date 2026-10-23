@@ -23,11 +23,11 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
   const faqs = [
     {
       q: `What does ${s.title.toLowerCase()} cost?`,
-      a: `Our service fee is confirmed with you before any work starts, and it is separate from fees charged by JAMB, NIMC, WAEC or the institution. Message us with your specific case and we will give you a figure rather than a range.`,
+      a: `Our service fee is confirmed with you before any work starts, and it is separate from fees charged by JAMB, WAEC, NECO or the institution. Message us with your specific case and we will give you a figure rather than a range.`,
     },
     {
       q: `How long does ${s.title.toLowerCase()} take?`,
-      a: `Most tasks are completed the same day where the official portal cooperates. Anything that depends on a third party, such as a NIMC correction or an institution's processing, takes as long as that body takes — we will tell you which category your job falls into.`,
+      a: `Most tasks are completed the same day where the official portal cooperates. Anything that depends on a third party, such as an institution's screening or a government office, takes as long as that body takes — we will tell you which category your job falls into.`,
     },
     {
       q: `Do you need my original documents?`,
@@ -35,7 +35,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
     },
     {
       q: `Can you guarantee the outcome?`,
-      a: `No. We carry out the work correctly on the official portal, but the decision itself belongs to JAMB, NIMC or the institution. No consultancy can promise an admission or a specific result.`,
+      a: `No. We carry out the work correctly on the official portal, but the decision itself belongs to JAMB, the exam body or the institution. No consultancy can promise an admission or a specific result.`,
     },
   ];
 

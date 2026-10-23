@@ -22,7 +22,7 @@ const principles = [
   {
     icon: "check",
     title: "Official portals only",
-    body: "Every registration, upload and correction is carried out on JAMB, NIMC, WAEC, NECO or the institution's own portal, using your details. You keep the receipts and the printouts.",
+    body: "Every registration, upload and correction we handle is carried out on JAMB's portal, the exam body's portal or the institution's own portal, using your details. You keep the receipts and the printouts. We do not carry out NIN enrolment or NIN modification — those are done by NIMC and its licensed agents.",
   },
   {
     icon: "compass",
@@ -56,7 +56,7 @@ export default function About() {
             ALPHAPHYSICS EDU CONSULT helps students and prospective undergraduates understand and complete the admission
             process. In practice that means two things: explaining how the system works in plain English, and handling the
             paperwork that goes with it — JAMB registration and corrections, O&apos;Level uploads to CAPS, Post-UTME
-            applications, NIN corrections, and the documents institutions ask for at clearance.
+            applications, and the documents institutions ask for at clearance.
           </p>
           <p>
             We work with candidates at every stage, from students who are still choosing a course to parents helping a

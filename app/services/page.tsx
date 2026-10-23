@@ -4,7 +4,7 @@ import { services } from "@/lib/site";
 import { PageHero, Container, Icon, WaBtn, WaBand } from "@/components/ui";
 export const metadata = meta(
   "JAMB, Admission & O'Level Services",
-  "JAMB/UTME support, Post-UTME and admission processing, O'Level result services, NIN corrections and one-on-one consultation for students in Nigeria.",
+  "JAMB/UTME support, Post-UTME and admission processing, O'Level result services, document clearance and one-on-one consultation for students in Nigeria.",
   "/services",
   { keywords: ["JAMB services Nigeria", "admission processing", "O'Level result checking"] },
 );

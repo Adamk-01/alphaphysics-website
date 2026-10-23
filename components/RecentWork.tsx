@@ -33,12 +33,12 @@ const works = [
     turnaround: "Usually 24–72 hours on the portal",
   },
   {
-    category: "NIN Services",
-    title: "NIN modification and profile code",
+    category: "Admission Processing",
+    title: "Profile mismatch check before you pay for anything",
     details:
-      "Name spelling and date-of-birth corrections on the NIMC record that cause JAMB profile code generation to fail.",
-    deliverable: "A NIN slip that matches the name you are registering with.",
-    turnaround: "Varies with NIMC processing",
+      "We check that the name and date of birth on your JAMB profile, O'Level result and other documents agree, and tell you which office to visit to correct anything that does not. We do not carry out NIN enrolment or NIN modification.",
+    deliverable: "A clear list of what matches, what does not, and where each correction has to be done.",
+    turnaround: "Same day",
   },
   {
     category: "Documents",
@@ -59,7 +59,7 @@ const works = [
 ];
 
 const principles = [
-  ["Official portals only", "Every transaction is done on JAMB, NIMC or the institution's own portal, using your details."],
+  ["Official portals only", "Every transaction we carry out is done on JAMB's portal or the institution's own portal, using your details. NIN enrolment and NIN modification are handled by NIMC directly, not by us."],
   ["No guaranteed admission", "Nobody can sell you admission. We explain your options and improve your paperwork."],
   ["Cost confirmed first", "You are told what a service costs and how long it takes before any work starts."],
   ["You keep the documents", "Receipts, slips and printouts are handed to you, not held back."],

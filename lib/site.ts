@@ -67,7 +67,6 @@ export const site = {
     "change of course and institution",
     "admission processing",
     "JAMB services",
-    "NIN for JAMB",
     "admission consultant Lagos",
     "education consultant Nigeria",
     "2027 aspirants",
@@ -185,19 +184,6 @@ export const services: Service[] = [
     msg: "Hello ALPHAPHYSICS EDU CONSULT, I need help processing Documents & Certificates.",
     keywords: ["state of origin certificate", "birth certificate Nigeria", "admission clearance documents"],
     seoDescription: "Birth certificates, state of origin and local government certificates, attestation letters and school testimonials processed for admission clearance and official use.",
-  },
-  {
-    slug: "nin-services",
-    title: "NIN Services",
-    icon: "users",
-    short: "NIN modification, slips and National ID card processing.",
-    what:
-      "Your NIN details must match your name and date of birth exactly, or JAMB registration will stall. We handle the correction and slip printing so that mismatch does not cost you a registration window.",
-    who: "JAMB candidates, admission seekers and members of the public updating their NIN record.",
-    help: ["NIN Modification (Name, DOB, etc.)", "Regular & Premium NIN Slip Printing", "National ID Card Processing"],
-    msg: "Hello ALPHAPHYSICS EDU CONSULT, I need help with NIN Services.",
-    keywords: ["NIN modification", "NIN slip printing", "NIN for JAMB registration"],
-    seoDescription: "NIN modification for name and date-of-birth mismatches, NIN slip printing and National ID card processing, so your JAMB registration is not held up by a record error.",
   },
   {
     slug: "one-on-one-consultation",

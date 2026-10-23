@@ -43,6 +43,7 @@ action outside the repository.
 | §5 Custom domain / backlinks | ◐ | Outside the repo — see ADSENSE-CHECKLIST.md §6 |
 | §5 Pricing expectation | ✅ | Fees wording added to terms, service pages and FAQ |
 | AdSense rejection causes | ✅ | See `ADSENSE-CHECKLIST.md` |
+| NIN service offering | ✅ | Removed at the owner's request — carrying on NIN modification without a NIMC agent licence is a legal exposure. Service, keyword, card and FAQs removed; `/services/nin-services` 301s to `/services`; a licensed-agent disclaimer added to `/terms` |
 
 ---
 

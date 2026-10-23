@@ -48,6 +48,13 @@ const nextConfig = {
     dangerouslyAllowSVG: false,
     contentDispositionType: "attachment",
   },
+  async redirects() {
+    return [
+      // The NIN service page was removed. Redirect permanently so anyone who already saw the
+      // URL (or a crawler that picked it up) lands on the services index instead of a 404.
+      { source: "/services/nin-services", destination: "/services", permanent: true },
+    ];
+  },
   async headers() {
     return [
       {
