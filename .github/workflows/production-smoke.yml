@@ -1,0 +1,27 @@
+name: Production smoke test
+
+# Runs after every successful Vercel production deployment, so a broken deploy is
+# caught automatically instead of by a visitor. Also runnable on demand.
+
+on:
+  deployment_status:
+  workflow_dispatch:
+
+jobs:
+  smoke:
+    if: >
+      github.event_name == 'workflow_dispatch' ||
+      (github.event.deployment_status.state == 'success' &&
+       github.event.deployment.environment == 'Production')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Check the live site
+        run: node scripts/check-production.mjs
+        env:
+          BASE_URL: https://alphaphysics-website.vercel.app

@@ -53,12 +53,51 @@ Images are served through Next's optimiser, which uses `sharp` (installed). Keep
 
 If you replace a source image, keep the same filenames so the layout and metadata do not need editing.
 
-## Deploy (Vercel)
+## Deploy (Vercel) — automatic
 
-1. Push to `main`.
-2. In Vercel → Project → Settings → Environment Variables, add `NEXT_PUBLIC_SITE_URL` = your production URL.
-3. Redeploy (the value is baked in at build time, so changing it requires a new build).
-4. After the first deploy, run `npm run verify` locally against production: `BASE_URL=https://alphaphysics-website.vercel.app node scripts/verify.mjs` is not supported — instead open `/sitemap.xml` and check the domain is correct.
+The repo is connected to Vercel through the GitHub integration, so **deployment is automatic**:
+
+| Trigger | Environment | URL |
+|---|---|---|
+| Push / merge to `main` | **Production** | https://alphaphysics-website.vercel.app |
+| Push to any other branch, or any PR | Preview | unique `*.vercel.app` link, commented on the PR by the Vercel bot |
+
+Nothing needs to be run by hand. To ship a change:
+
+```bash
+git checkout -b your-change
+# edit files
+git add -A && git commit -m "..." && git push
+gh pr create --base main      # Vercel builds a preview
+gh pr merge <number> --merge  # Vercel builds production
+```
+
+**Environment variables (Vercel → Settings → Environment Variables):**
+
+| Variable | Value | Notes |
+|---|---|---|
+| `NEXT_PUBLIC_SITE_URL` | `https://alphaphysics-website.vercel.app` | Used for canonical tags and the sitemap. It is inlined at build time, so changing it requires a redeploy. If it is missing, the site falls back to the same URL and logs a warning during the build. |
+
+If you attach a custom domain later, change this variable **and** add the new domain to Search Console.
+
+### Automatic post-deploy check
+
+`.github/workflows/production-smoke.yml` runs `scripts/check-production.mjs` every time a
+production deployment succeeds. It verifies that the live site serves every page, that the
+canonical and sitemap use the real domain (not `localhost`), that the legal pages, favicon and
+social-preview image load, that security headers are present, and that no placeholder copy has
+crept back in. A failed check shows up under the repo's **Actions** tab.
+
+Run it yourself any time:
+
+```bash
+BASE_URL=https://alphaphysics-website.vercel.app node scripts/check-production.mjs
+```
+
+### CI on pull requests
+
+`.github/workflows/ci.yml` runs typecheck, build and `npm run verify` on every PR, so a broken
+build cannot be merged.
 
 ## Search Console and AdSense
 
