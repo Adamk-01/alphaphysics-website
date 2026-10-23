@@ -32,8 +32,15 @@ export const site = {
   addressLocality: "Lagos",
   addressRegion: "Lagos",
   country: "NG",
-  // Full profile URLs. Empty ones are hidden from the site and JSON-LD.
-  socials: { Instagram: "", Facebook: "", TikTok: "", X: "", LinkedIn: "", YouTube: "" } as Record<string, string>,
+  /**
+   * Social profiles. Only entries with a real URL are rendered — on the site and in the
+   * JSON-LD `sameAs` array. Leave an entry out entirely rather than adding a placeholder;
+   * an empty list renders no social block at all.
+   *
+   * To add one, give it the full profile URL:
+   *   socials: { Instagram: "https://instagram.com/yourhandle" },
+   */
+  socials: {} as Record<string, string>,
 
   /**
    * Primary search terms. Google has ignored <meta name="keywords"> since 2009, but Bing,
