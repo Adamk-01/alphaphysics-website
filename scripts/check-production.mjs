@@ -104,6 +104,24 @@ async function main() {
   }
   ok(!head.headers.has("x-powered-by"), "x-powered-by header is exposed");
 
+  // --- NIN must not be advertised (owner is not a licensed NIMC agent) ------
+  ok(!locs.some((u) => u.includes("nin-services")), "sitemap still lists /services/nin-services");
+  const ninRes = await fetch(BASE + "/services/nin-services", {
+    redirect: "manual",
+    signal: AbortSignal.timeout(20_000),
+  });
+  ok(
+    ninRes.status >= 300 && ninRes.status < 400,
+    `/services/nin-services returned ${ninRes.status}, expected a redirect to /services`,
+  );
+  const servicesBody = bodies["/services"] || "";
+  ok(!/NIN Services/i.test(servicesBody), "/services still advertises NIN Services");
+  ok(!/NIN modification/i.test(servicesBody), "/services still mentions NIN modification");
+  ok(
+    /not a licensed/i.test(bodies["/terms"] || ""),
+    "terms page is missing the licensed NIMC agent disclaimer",
+  );
+
   // --- content regressions --------------------------------------------------
   for (const path of ["/", "/about", "/faq"]) {
     const body = bodies[path] || "";
