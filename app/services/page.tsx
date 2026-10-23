@@ -2,7 +2,12 @@ import Link from "next/link";
 import { meta } from "@/lib/seo";
 import { services } from "@/lib/site";
 import { PageHero, Container, Icon, WaBtn, WaBand } from "@/components/ui";
-export const metadata = meta("Our Services: JAMB, Admission, O'Level & Consultation", "JAMB/UTME support, admission guidance, O'Level support, admission forms, one-on-one consultation and school information for Nigerian students.", "/services");
+export const metadata = meta(
+  "JAMB, Admission & O'Level Services",
+  "JAMB/UTME support, Post-UTME and admission processing, O'Level result services, NIN corrections and one-on-one consultation for students in Nigeria.",
+  "/services",
+  { keywords: ["JAMB services Nigeria", "admission processing", "O'Level result checking"] },
+);
 export default function Services() {
   return (<>
     <PageHero eyebrow="Services" title="How ALPHAPHYSICS can help you">Guidance for every stage of your admission journey.</PageHero>

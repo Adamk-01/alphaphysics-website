@@ -1,3 +1,16 @@
+/**
+ * Indicative cut-off marks.
+ *
+ * These are broad estimates compiled from previous admission cycles so students can
+ * judge roughly where they stand. They are NOT official figures and they are not a
+ * prediction: every institution publishes its own current cut-off, and individual
+ * departments usually require a higher score than the institutional minimum.
+ *
+ * When updating: refresh the numbers AND the `lastReviewed` value below, because the
+ * page displays that date to readers.
+ */
+export const CUTOFF_LAST_REVIEWED = "2025/2026 admission cycle";
+
 export const schools = [
   {
     id: "unilag",

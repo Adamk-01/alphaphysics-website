@@ -1,6 +1,48 @@
-@tailwind base;@tailwind components;@tailwind utilities;
-html{scroll-behavior:smooth}
-body{@apply bg-white text-slate-800 antialiased;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
-h1,h2,h3{@apply text-navy;font-family:Georgia,"Times New Roman",serif;letter-spacing:-.01em}
-:focus-visible{outline:3px solid #D9A21B;outline-offset:2px}
-@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white text-slate-800 antialiased;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  @apply text-navy;
+  font-family: Georgia, "Times New Roman", serif;
+  letter-spacing: -0.01em;
+}
+
+/*
+ * Two-tone focus ring: navy against white content, with a white halo so the ring is
+ * still visible when the element sits on a navy or green section. The previous gold
+ * ring measured 2.30:1 against white, below the 3:1 minimum for non-text contrast.
+ */
+:focus-visible {
+  outline: 3px solid #0f2f73;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 5px #ffffff;
+  border-radius: 2px;
+}
+
+/* Dark sections: invert the halo so the ring reads on navy. */
+.bg-navy :focus-visible,
+.bg-navy-dark :focus-visible,
+.bg-brand-green :focus-visible {
+  outline-color: #ffffff;
+  box-shadow: 0 0 0 5px #0f2f73;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
